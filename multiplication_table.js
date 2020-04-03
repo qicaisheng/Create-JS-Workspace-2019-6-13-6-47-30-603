@@ -5,4 +5,15 @@ function isValid(firstNumber, secondNumber) {
     return secondNumber >= firstNumber
 }
 
-module.exports = isValid
+generateSequencesBetween = (firstNumber, secondNumber) => {
+    sequences = []
+    for (let item = firstNumber; item <= secondNumber; item++) {
+        sequences.push(item)
+    } 
+    return sequences
+}
+
+module.exports = {
+    isValid: isValid,
+    generateSequencesBetween: generateSequencesBetween
+}
