@@ -23,6 +23,12 @@ const generateMultiplicationRow = (firstNumber, secondNumber) => {
         .join(" ")
 }
 
+const generateMultiplicationTable = (firstNumber, secondNumber) => {
+    return generateSequencesBetween(firstNumber, secondNumber)
+        .map(rowNumber => generateMultiplicationRow(firstNumber, rowNumber))
+        .join(" ")
+}
+
 module.exports = {
     isValid,
     generateSequencesBetween,
