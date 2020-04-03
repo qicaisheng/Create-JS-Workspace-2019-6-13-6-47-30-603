@@ -1,4 +1,9 @@
-const {isValid, generateSequencesBetween, generateMultiplyConditions} = require('../multiplication_table')
+const {
+    isValid, 
+    generateSequencesBetween, 
+    generateMultiplyConditions,
+    generateMultiplicationRow
+} = require('../multiplication_table')
 
 it('should check the input', () => {
     expect(isValid(2, 4)).toBe(true)
@@ -16,4 +21,10 @@ it('should generate sequences between two numbers', () => {
 
 it('shuld generate multiply math conditions', () => {
     expect(generateMultiplyConditions(2, 2)).toBe("2*2=4")
+});
+
+it('should generate multiplication row', () => {
+    expect(generateMultiplicationRow(2, 2)).toBe("2*2=4")
+    expect(generateMultiplicationRow(2, 3)).toBe("2*3=6 3*3=9")
+    expect(generateMultiplicationRow(2, 4)).toBe("2*4=8 3*4=12 4*4=16")
 });

@@ -15,10 +15,17 @@ const generateSequencesBetween = (firstNumber, secondNumber) => {
 
 const generateMultiplyConditions = (firstNumber, secondNumber)=> {
     return firstNumber + "*" + secondNumber + "=" + firstNumber * secondNumber
-} 
+}
+
+const generateMultiplicationRow = (firstNumber, secondNumber) => {
+    return generateSequencesBetween(firstNumber, secondNumber)
+        .map(rowNumber => generateMultiplyConditions(rowNumber, secondNumber))
+        .join(" ")
+}
 
 module.exports = {
     isValid,
     generateSequencesBetween,
-    generateMultiplyConditions
+    generateMultiplyConditions,
+    generateMultiplicationRow
 }
