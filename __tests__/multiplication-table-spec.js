@@ -1,6 +1,6 @@
 const {isValid, generateSequencesBetween} = require('../multiplication_table')
 
-it('should check the input', function () {
+it('should check the input', () => {
     expect(isValid(2, 4)).toBe(true)
     expect(isValid(4, 4)).toBe(true)
     expect(isValid(4, 2)).toBe(false)

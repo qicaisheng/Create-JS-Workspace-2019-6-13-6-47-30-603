@@ -1,11 +1,11 @@
-function isValid(firstNumber, secondNumber) {
+const isValid = (firstNumber, secondNumber) => {
     if (firstNumber < 1 || secondNumber > 1000) {
         return false
     } 
     return secondNumber >= firstNumber
-}
+};
 
-generateSequencesBetween = (firstNumber, secondNumber) => {
+const generateSequencesBetween = (firstNumber, secondNumber) => {
     sequences = []
     for (let item = firstNumber; item <= secondNumber; item++) {
         sequences.push(item)
