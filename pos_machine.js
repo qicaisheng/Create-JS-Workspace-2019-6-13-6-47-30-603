@@ -26,12 +26,13 @@ const getProductBy = (id) => {
     return products.find(product => product.id === id)
 }
 
-const calculateSumPrice = (orders) => {
-    return orders.map(order => order.number * order.product.price).reduce((sum, itemPrice) => sum + itemPrice)
+const generateReceipts = (orders) => {
+    let price = orders.map(order => order.number * order.product.price).reduce((sum, itemPrice) => sum + itemPrice);
+    return {orders: orders, price: price}
 }
 
 module.exports = {
     generateOrders,
     getProductBy,
-    calculateSumPrice
+    generateReceipts
 }
