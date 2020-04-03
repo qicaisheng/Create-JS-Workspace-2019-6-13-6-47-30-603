@@ -11,7 +11,7 @@ AC2: The start number and the end number can be any number in a range of 1 to 10
 AC3: The output should be a string represents the multiplication table. Suppose that the start number is *2* and the end number is *4*, the output should be something like the following. Please note that all columns should be aligned properly.
 
 ```
-2*2=4
+2*2=4   
 2*3=6  3*3=9
 2*4=8  3*4=12  4*4=16
 ```

@@ -24,14 +24,18 @@ const generateMultiplicationRow = (firstNumber, secondNumber) => {
 }
 
 const generateMultiplicationTable = (firstNumber, secondNumber) => {
+    if (!isValid(firstNumber, secondNumber)) {
+        return "null"
+    }
     return generateSequencesBetween(firstNumber, secondNumber)
         .map(rowNumber => generateMultiplicationRow(firstNumber, rowNumber))
-        .join(" ")
+        .join("\n")
 }
 
 module.exports = {
     isValid,
     generateSequencesBetween,
     generateMultiplyConditions,
-    generateMultiplicationRow
+    generateMultiplicationRow,
+    generateMultiplicationTable
 }

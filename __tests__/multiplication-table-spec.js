@@ -31,10 +31,13 @@ it('should generate multiplication row', () => {
 });
 
 describe("generate multiplication table", () => {
+    it("should return null when input is not valid", () => {
+        expect(generateMultiplicationTable(4, 2)).toBe("null")
+    })
+
     it('should generate multiplication table', () => {
         expect(generateMultiplicationTable(2, 2)).toBe("2*2=4")
         expect(generateMultiplicationTable(2, 3)).toBe("2*2=4\n2*3=6 3*3=9")
         expect(generateMultiplicationTable(2, 4)).toBe("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16")
     })
-
 });
