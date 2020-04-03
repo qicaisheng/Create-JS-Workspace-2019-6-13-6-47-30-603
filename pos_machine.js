@@ -31,8 +31,28 @@ const generateReceipts = (orders) => {
     return {orders: orders, price: price}
 }
 
+const renderReceipts = (receipts) => {
+    return "Receipts\n" +
+        "------------------------------------------------------------\n" +
+        renderOrders(receipts.orders) + "\n" +
+        "------------------------------------------------------------\n" +
+        "Price: " + receipts.price
+}
+
+const renderOrderItem = orderItem => {
+    const priceIndex = 32;
+    const numberIndex = 10;
+    return orderItem.product.name + " ".repeat(priceIndex - orderItem.product.name.length) + orderItem.product.price + " ".repeat(numberIndex) + orderItem.number
+};
+
+const renderOrders= (orders) => {
+    return orders.map(orderItem => renderOrderItem(orderItem)).join("\n")
+}
+
+
 module.exports = {
     generateOrders,
     getProductBy,
-    generateReceipts
+    generateReceipts,
+    renderReceipts
 }
