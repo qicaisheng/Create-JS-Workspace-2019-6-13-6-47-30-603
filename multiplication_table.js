@@ -18,7 +18,7 @@ const generateMultiplyConditions = (firstNumber, secondNumber)=> {
 } 
 
 module.exports = {
-    isValid: isValid,
-    generateSequencesBetween: generateSequencesBetween,
-    generateMultiplyConditions: generateMultiplyConditions
+    isValid,
+    generateSequencesBetween,
+    generateMultiplyConditions
 }
