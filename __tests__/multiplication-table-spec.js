@@ -30,8 +30,11 @@ it('should generate multiplication row', () => {
     expect(generateMultiplicationRow(2, 4)).toBe("2*4=8 3*4=12 4*4=16")
 });
 
-it('should generate multiplication table', () => {
-    expect(generateMultiplicationTable(2, 2)).toBe("2*2=4")
-    expect(generateMultiplicationTable(2, 3)).toBe("2*2=4\n2*3=6 3*3=9")
-    expect(generateMultiplicationTable(2, 4)).toBe("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16")
-})
+describe("generate multiplication table", () => {
+    it('should generate multiplication table', () => {
+        expect(generateMultiplicationTable(2, 2)).toBe("2*2=4")
+        expect(generateMultiplicationTable(2, 3)).toBe("2*2=4\n2*3=6 3*3=9")
+        expect(generateMultiplicationTable(2, 4)).toBe("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16")
+    })
+
+});
