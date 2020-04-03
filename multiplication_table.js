@@ -13,7 +13,12 @@ const generateSequencesBetween = (firstNumber, secondNumber) => {
     return sequences
 }
 
+const generateMultiplyConditions = (firstNumber, secondNumber)=> {
+    return firstNumber + "*" + secondNumber + "=" + firstNumber * secondNumber
+} 
+
 module.exports = {
     isValid: isValid,
-    generateSequencesBetween: generateSequencesBetween
+    generateSequencesBetween: generateSequencesBetween,
+    generateMultiplyConditions: generateMultiplyConditions
 }
