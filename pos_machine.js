@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const generateOrders = (barcodes) => {
     let orders = []
     barcodes.forEach(barcode => {
@@ -11,4 +13,14 @@ const generateOrders = (barcodes) => {
     return orders
 }
 
-module.exports = generateOrders
+const getProductBy = (id) => {
+    let productsData = fs.readFileSync('products.json') 
+    let products = JSON.parse(productsData)
+    
+    return products.find(product => product.id === id)
+}
+
+module.exports = {
+    generateOrders,
+    getProductBy
+}
