@@ -6,7 +6,7 @@ const isValid = (firstNumber, secondNumber) => {
 };
 
 const generateSequencesBetween = (firstNumber, secondNumber) => {
-    sequences = []
+    const sequences = []
     for (let item = firstNumber; item <= secondNumber; item++) {
         sequences.push(item)
     } 
