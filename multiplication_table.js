@@ -14,7 +14,7 @@ const generateSequencesBetween = (firstNumber, secondNumber) => {
 }
 
 const generateMultiplyConditions = (firstNumber, secondNumber)=> {
-    return firstNumber + "*" + secondNumber + "=" + firstNumber * secondNumber
+    return `${firstNumber}*${secondNumber}=${firstNumber * secondNumber}`
 }
 
 const generateMultiplicationRow = (firstNumber, secondNumber) => {
